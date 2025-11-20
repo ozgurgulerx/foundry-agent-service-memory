@@ -1,6 +1,7 @@
 # Local caches and virtual envs
 .cache/
 .venv/
+/venv
 
 # Bytecode
 __pycache__/
@@ -8,3 +9,6 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+
+/docu
