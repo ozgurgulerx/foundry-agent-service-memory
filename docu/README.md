@@ -13,7 +13,9 @@ using the Responses API.
 - Access to Azure AI Agent Service (preview) and any required preview features.
 - Python 3.11+ environment with `pip`.
 - API credentials stored as environment variables (example names below; adjust to your setup):
-  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_API_VERSION` (e.g., `2024-10-01-preview` for Responses).
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_API_VERSION` (defaults to `2024-02-15-preview` in notebooks).
+  - `AZURE_OPENAI_RESPONSES_DEPLOYMENT_NAME` (Responses deployment for `AzureOpenAIResponsesClient`).
+  - Optional: `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME`, `AZURE_OPENAI_BASE_URL`.
   - `AZURE_AGENT_SERVICE_ENDPOINT`, `AZURE_AGENT_SERVICE_API_KEY` (if using key auth), or configuration for AAD auth if preferred.
 
 ## Suggested notebooks
@@ -26,8 +28,8 @@ using the Responses API.
 
 ## Quick start (local, WIP)
 1) Create a virtual environment: `python -m venv .venv && source .venv/bin/activate` (or `.\.venv\Scripts\activate` on Windows).
-2) Upgrade pip and install the core SDKs: `pip install -U pip openai jupyter`
-   - Add the agent-framework SDK once you pick the target runtime (Python or JS) and pin the version used by Agent Service.
+2) Upgrade pip and install base deps: `pip install -U pip -r requirements.txt`
+   - Requirements include `agent-framework-azure-ai==1.0.0b251114` (preview). Add any Agent Service SDK once the version is chosen.
 3) Populate the environment variables listed above (e.g., via `.env` or your shell) and run `jupyter lab` or `jupyter notebook`.
 
 ## Notes and open items

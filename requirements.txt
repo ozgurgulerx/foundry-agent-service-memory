@@ -1,0 +1,8 @@
+# Notebook runtime
+jupyterlab>=4.2.5,<5.0
+ipykernel>=6.29.5,<7.0
+
+# Azure OpenAI + Agent Framework (Python)
+agent-framework-azure-ai==1.0.0b251114
+azure-identity>=1.19.0,<2.0
+openai>=1.40.0,<2.0
